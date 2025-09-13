@@ -112,11 +112,11 @@ export default class CalculatorComponent extends Component {
         <tbody>
           <tr>
             <th>Flour</th>
-            <td>{{this.round this.flour}} g</td>
+            <td>{{this.round this.flour 0}} g</td>
           </tr>
           <tr>
             <th>Water</th>
-            <td>{{this.round this.water}} g</td>
+            <td>{{this.round this.water 0}} g</td>
           </tr>
           <tr>
             <th>Yeast</th>
