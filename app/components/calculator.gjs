@@ -54,6 +54,11 @@ export default class CalculatorComponent extends Component {
     }
   }
 
+  @action
+  ignore(event) {
+    event.preventDefault();
+  }
+
   <template>
     <header>
       <h1 aria-label="Pizza Dough Calculator">🍕</h1>
@@ -67,7 +72,7 @@ export default class CalculatorComponent extends Component {
       </p>
     </header>
 
-    <form {{on "change" this.update}}>
+    <form {{on "change" this.update}} {{on "submit" this.ignore}}>
       <div>
         <label for="portion">Portion g</label>
         <input
