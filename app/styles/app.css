@@ -1,1 +1,102 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+:root {
+  --a1: #523c4e;
+  --a4: #84545c;
+  --b7: #d44e52;
+  --b10: #ec8a4b;
+  --a3: #3e5442;
+  --a6: #5c7a56;
+  --b9: #80ac40;
+  --c1: #101024;
+  --a2: #2a2a3a;
+  --a5: #38607c;
+  --b8: #55a894;
+  --b11: #8bd0ba;
+  --c2: #b27e56;
+  --b12: #ffcc68;
+  --c3: #fff8c0;
+  --w: #fff;
+  --golden-diatonic: calc(pow(calc((1 + sqrt(5)) / 2), 1 / 2));
+  --fs-base: 1rem;
+  --fs-sm: calc(round(var(--fs-base) * pow(var(--golden-diatonic), -1), 1px));
+  --fs-md: var(--fs-base);
+  --fs-lg: calc(round(var(--fs-base) * pow(var(--golden-diatonic), 1.5), 1px));
+  --fs-xl: calc(round(var(--fs-base) * pow(var(--golden-diatonic), 2), 1px));
+  --fs-2xl: calc(round(var(--fs-base) * pow(var(--golden-diatonic), 3), 1px));
+  --fs-3xl: calc(round(var(--fs-base) * pow(var(--golden-diatonic), 4), 1px));
+  --fs-4xl: calc(round(var(--fs-base) * pow(var(--golden-diatonic), 5), 1px));
+  --s-2xs: 0.125rem;
+  --s-xs: 0.25rem;
+  --s-sm: 0.5rem;
+  --s-md: 1rem;
+  --s-lg: 1.5rem;
+  --s-xl: 2.5rem;
+  --s-2xl: 4rem;
+  --s-3xl: 7rem;
+  --fg-interactive: var(--w);
+}
+
+* {
+  font-family:
+    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+    'DejaVu Sans Mono', monospace;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--a1);
+  color: var(--c3);
+  font-size: var(--fs-md);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body > * {
+  padding: max(3vw, var(--s-lg));
+}
+
+h1,
+h2,
+p,
+dl {
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+h2 {
+  color: var(--b12);
+}
+
+a {
+  color: color-mix(in oklch, currentcolor 50%, var(--fg-interactive) 50%);
+}
+
+a:focus,
+a:hover {
+  color: var(--fg-interactive);
+}
+
+dt {
+  color: var(--fg-interactive);
+}
+
+dd {
+  margin-top: var(--s-sm);
+}
+
+table,
+p,
+dl {
+  margin-block: 0;
+}
+
+* + :is(table, p, dl, dt) {
+  margin-top: var(--s-lg);
+}
+
+small,
+p,
+dd {
+  text-wrap: balance;
+}

@@ -1,3 +1,5 @@
+const scopedCSS = require('ember-scoped-css/build');
+
 const {
   babelCompatSupport,
   templateCompatSupport,
@@ -14,7 +16,7 @@ module.exports = {
           'ember-cli-htmlbars-inline-precompile',
           'htmlbars-inline-precompile',
         ],
-        transforms: [...templateCompatSupport()],
+        transforms: [...templateCompatSupport(), scopedCSS.templatePlugin({})],
       },
     ],
     [

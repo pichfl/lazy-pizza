@@ -1,0 +1,96 @@
+header {
+  background: var(--a2);
+  color: var(--b12);
+  padding: var(--s-md) var(--s-lg);
+  text-align: center;
+}
+
+h1 {
+  margin-block: 0;
+  color: var(--c3);
+  font-size: var(--fs-3xl);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: var(--s-xs) var(--s-md);
+}
+
+form > div {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
+  grid-row: span 2;
+}
+
+label {
+  display: block;
+  color: var(--c2);
+}
+
+input[type='number'] {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--a4);
+  color: var(--c3);
+  background: var(--c2);
+  padding: var(--s-sm) var(--s-md);
+  font-size: var(--fs-lg);
+}
+
+input[type='number']:focus {
+  outline: 0;
+  border-color: var(--c3);
+}
+
+small {
+  display: block;
+  color: var(--b12);
+}
+
+.out {
+  width: 100%;
+  font-size: var(--fs-lg);
+  border-collapse: collapse;
+}
+
+.out :is(td, th) {
+  padding: var(--s-sm) var(--s-md);
+}
+
+.out tr:not(:first-child) :is(td, th) {
+  border-top: var(--s-2xs) solid var(--a6);
+}
+
+.out th {
+  text-align: left;
+  font-weight: inherit;
+}
+
+.out td {
+  text-align: right;
+  font-weight: bold;
+}
+
+.out th:first-child {
+  padding-left: 0;
+}
+
+.out td:last-child {
+  padding-right: 0;
+}
+
+main {
+  margin: max(3vw, var(--s-lg)) max(3vw, var(--s-lg)) 0;
+  background: var(--w);
+  color: var(--a3);
+  box-shadow:
+    0 var(--s-sm) var(--s-xl) calc(-1 * var(--s-2xs)) var(--c1),
+    0 0 0 2px var(--a2);
+}
+
+main + p {
+  margin-top: 0;
+}
