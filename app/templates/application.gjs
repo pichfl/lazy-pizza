@@ -30,7 +30,11 @@ import Calculator from '../components/calculator';
       <dt>Sauce?</dt>
       <dd>Following the theme of less work: Mutti pizza sauce works for me.</dd>
       <dt>Will you add x to this calculator</dt>
-      <dd>Probably not.</dd>
+      <dd>Probably not. But the source code can be found
+        <a
+          href="https://github.com/pichfl/lazy-pizza"
+          rel="noopener noreferrer"
+        >on GitHub</a>.</dd>
     </dl>
   </aside>
 
