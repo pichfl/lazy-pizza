@@ -4,6 +4,7 @@ import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from 'lazy-pizza/config/environment';
 import { importSync, isDevelopingApp, macroCondition } from '@embroider/macros';
+import './styles/index.css';
 
 if (macroCondition(isDevelopingApp())) {
   importSync('./deprecation-workflow');
