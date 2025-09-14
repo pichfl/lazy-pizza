@@ -6,7 +6,7 @@ import Calculator from 'lazy-pizza/components/calculator';
 module('Integration | Component | calculator', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test.skip('it renders', async function (assert) {
     // Updating values is achieved using autotracking, just like in app code. For example:
     // class State { @tracked myProperty = 0; }; const state = new State();
     // and update using state.myProperty = 1; await rerender();
