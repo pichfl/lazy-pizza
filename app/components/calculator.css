@@ -13,6 +13,8 @@ h1 {
 
 form {
   display: grid;
+  max-width: 48rem;
+  margin-inline: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
   gap: var(--s-xs) var(--s-md);
@@ -83,14 +85,13 @@ small {
 }
 
 main {
-  margin: max(3vw, var(--s-lg)) max(3vw, var(--s-lg)) 0;
+  max-width: calc(48rem - 2 * max(3vw, var(--s-lg)));
+  margin-bottom: var(--s-md);
+  margin-inline: auto;
+  padding: max(3vw, var(--s-lg));
   background: var(--w);
   color: var(--a3);
   box-shadow:
     0 var(--s-sm) var(--s-xl) calc(-1 * var(--s-2xs)) var(--c1),
     0 0 0 2px var(--a2);
-}
-
-main + p {
-  margin-top: 0;
 }

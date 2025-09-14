@@ -107,36 +107,38 @@ export default class CalculatorComponent extends Component {
       </div>
     </form>
 
-    <main>
-      <table class="out">
-        <tbody>
-          <tr>
-            <th>Flour</th>
-            <td>{{this.round this.flour 0}} g</td>
-          </tr>
-          <tr>
-            <th>Water</th>
-            <td>{{this.round this.water 0}} g</td>
-          </tr>
-          <tr>
-            <th>Yeast</th>
-            <td>{{this.round this.yeast}} g</td>
-          </tr>
-          <tr>
-            <th>Salt</th>
-            <td>{{this.round this.salt}} g</td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
+    <div>
+      <main>
+        <table class="out">
+          <tbody>
+            <tr>
+              <th>Flour</th>
+              <td>{{this.round this.flour 0}} g</td>
+            </tr>
+            <tr>
+              <th>Water</th>
+              <td>{{this.round this.water 0}} g</td>
+            </tr>
+            <tr>
+              <th>Yeast</th>
+              <td>{{this.round this.yeast}} g</td>
+            </tr>
+            <tr>
+              <th>Salt</th>
+              <td>{{this.round this.salt}} g</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
 
-    <aside>
-      <p>
-        <small>
-          *: Changing the raise below 18 hours is possible but really
-          not&nbsp;recommended.
-        </small>
-      </p>
-    </aside>
+      <aside>
+        <p>
+          <small>
+            *: Changing the raise below 18 hours is possible but really
+            not&nbsp;recommended.
+          </small>
+        </p>
+      </aside>
+    </div>
   </template>
 }
